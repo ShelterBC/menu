@@ -30,6 +30,11 @@ body, html {
     color: black;
 }
 
+.placeName h1 {
+    font-size: 3em;
+    margin: 10px 0;
+}
+
 .shelter-header-ph {
     background: url("../media/header/headd.jpg") center center no-repeat;
 }
@@ -66,7 +71,9 @@ body, html {
 }
 
 .btn-back-photo {
-    background: url("../media/icons/free-icon-back-130882.png") center center no-repeat;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
 
 .btn-back {

@@ -395,7 +395,7 @@ hr {
     }
     .shelter-info {
         justify-content: flex-start;
-        font-size: 12px;
+        font-size: 14px;
         flex-direction: column;
     }
     .menu_nav {

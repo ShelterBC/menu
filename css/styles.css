@@ -8,6 +8,11 @@
     src: url("../fonts/Noah-Regular.ttf"); 
 }
 
+@font-face {
+    font-family: Noah-bold;
+    src: url("../fonts/Noah-Bold.ttf"); 
+}
+
 body {
     background: whitesmoke;
 }
@@ -37,6 +42,7 @@ body, html {
 .placeName h1 {
     font-size: 3em;
     margin: 10px 0;
+    font-family: Noah-bold, sans-serif;
 }
 
 .shelter-header-ph {

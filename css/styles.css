@@ -1,15 +1,19 @@
-
-   @font-face {
+@font-face {
     font-family: RoadRage;
     src: url("../fonts/13891.ttf"); 
-   }
+}
+
+@font-face {
+    font-family: Noah;
+    src: url("../fonts/Noah-Regular.ttf"); 
+}
 
 body {
     background: whitesmoke;
 }
 
 body, html {
-    font-family: "Rubik",sans-serif;
+    font-family: Noah, sans-serif;
     line-height: 1.4;
 }
 
@@ -248,7 +252,7 @@ body, html {
     display: none;
 }
 
-#food1, #food2 {
+#bavarages1, #bavarages2 {
     display: none;
 }
 
@@ -296,6 +300,23 @@ hr {
     display: flex;
     justify-content: space-around;
     margin-bottom: 10px;
+}
+
+.productDescription {
+    font-family: Noah, sans-serif;
+}
+
+.productDescription p {
+    font-weight: 600;
+}
+
+.extrainf p {
+    font-weight: normal;
+
+}
+
+.productEnergy, .productWeight {
+    font-style: normal;
 }
 
 
@@ -391,6 +412,18 @@ hr {
         background: url("../media/header/mobileHead.jpg") center center no-repeat;
     }
     
+}
+
+@media only screen and (max-width: 375px) {
+    .placeName h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .placeName h1 {
+        font-size: 2em;
+    }
 }
 
 

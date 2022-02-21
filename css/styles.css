@@ -97,6 +97,7 @@ body, html {
     border-radius: 50%;
     border: solid rgb(255, 255, 255);
     background-color: white;
+    border: 1px solid black;
     z-index: 10;
 }
 

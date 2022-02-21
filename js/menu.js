@@ -51,20 +51,20 @@ function Task1() {
     if(isActive("butn1"))return;
     if(document.getElementById('butn2').style.color = "white") { //second buttun active
         document.getElementById('butn2').style = "color: black; background: white";
-        addBavarages();
+        addFood();
     }
     document.getElementById('butn1').style = "color: white; background: black";
-    removeFood();
+    removeBavarages();
 }
 
 function Task2() {
     if(isActive("butn2"))return;
     if(document.getElementById('butn1').style.color = "white") { //first buttun active
         document.getElementById('butn1').style = "color: black; background: white";
-        addFood();
+        addBavarages();
     }
     document.getElementById('butn2').style = "color: white; background: black";
-    removeBavarages();
+    removeFood();
 }
 
 

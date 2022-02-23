@@ -4,8 +4,12 @@ document.getElementById('bavarages1').onclick = Task3;
 document.getElementById('bavarages2').onclick = Task4;
 document.getElementById('food1').onclick = Task5;
 document.getElementById('food2').onclick = Task6;
-document.getElementById('back').onclick = Task7;
+document.getElementById('backk').onclick = Task7;
 document.getElementById('hide').onclick = reload;
+document.getElementById('navvSnid').onclick = Task8;
+document.getElementById('navvLan').onclick = Task9;
+document.getElementById('navvCoff').onclick = Task10;
+document.getElementById('navvTea').onclick = Task11;
 
 
 var now = new Date();
@@ -75,8 +79,10 @@ function Task3() {
     removeBavarages();
     document.getElementById("butn1").style.display = "none";
     document.getElementById("butn2").style.display = "none";
-    document.getElementById('back').style.display = "inline-block";
+    document.getElementById("navv").style.display = "flex";
+    document.getElementById("navvCoff").className = "buttonActive";
     document.getElementById('mainContainer').style.height = "auto";
+    document.getElementById('shelter-info').style.display = 'none';
 }
 
 function Task4() {
@@ -85,8 +91,10 @@ function Task4() {
     removeBavarages();
     document.getElementById("butn1").style.display = "none";
     document.getElementById("butn2").style.display = "none";
-    document.getElementById('back').style.display = "inline-block";
+    document.getElementById("navv").style.display = "flex";
+    document.getElementById("navvTea").className = "buttonActive";
     document.getElementById('mainContainer').style.height = "auto";
+    document.getElementById('shelter-info').style.display = 'none';
 }
 
 function Task5() {
@@ -95,8 +103,10 @@ function Task5() {
     removeFood();
     document.getElementById("butn1").style.display = "none";
     document.getElementById("butn2").style.display = "none";
-    document.getElementById('back').style.display = "inline-block";
+    document.getElementById("navv").style.display = "flex";
+    document.getElementById("navvSnid").className = "buttonActive";
     document.getElementById('mainContainer').style.height = "auto";
+    document.getElementById('shelter-info').style.display = 'none';
 }
 
 function Task6() {
@@ -105,30 +115,95 @@ function Task6() {
     removeFood();
     document.getElementById("butn1").style.display = "none";
     document.getElementById("butn2").style.display = "none";
-    document.getElementById('back').style.display = "inline-block";
+    document.getElementById("navv").style.display = "flex";
+    document.getElementById("navvLan").className = "buttonActive";
     document.getElementById('mainContainer').style.height = "auto";
+    document.getElementById('shelter-info').style.display = 'none';
 }
 
 function Task7() {
     document.getElementById("butn1").style.display = "flex";
     document.getElementById("butn2").style.display = "flex";
     document.getElementById('mainContainer').style.height = contentHeight;
-    document.getElementById('back').style.display = "none";
+    document.getElementById("navv").style.display = "none";
+    document.getElementById('shelter-info').style.display = 'flex';
 
 
     if(document.getElementById("snid").style.display == "flex") {
         document.getElementById("snid").style.display = "none";
+        document.getElementById("navvSnid").className = "";
         addFood();
+        document.getElementById('butn1').style = "color: white; background: black";
+        document.getElementById('butn2').style = "color: black; background: white";
     } 
     else if(document.getElementById("lanch").style.display == "flex") {
         document.getElementById("lanch").style.display = "none";
+        document.getElementById("navvLan").className = "";
         addFood();
+        document.getElementById('butn1').style = "color: white; background: black";
+        document.getElementById('butn2').style = "color: black; background: white";
     }
     else if(document.getElementById("coffee").style.display == "flex") {
         document.getElementById("coffee").style.display = "none";
+        document.getElementById("navvCoff").className = "";
         addBavarages();
+        document.getElementById('butn2').style = "color: white; background: black";
+        document.getElementById('butn1').style = "color: black; background: white";
     } else {
         document.getElementById("tea").style.display = "none";
+        document.getElementById("navvTea").className = "";
         addBavarages();
+        document.getElementById('butn2').style = "color: white; background: black";
+        document.getElementById('butn1').style = "color: black; background: white";
     }
+}
+
+function categoryOnDisplay() {
+    if(document.getElementById("snid").style.display == "flex") {
+        document.getElementById("navvSnid").className = "";
+        return "snid";
+    } 
+    else if(document.getElementById("lanch").style.display == "flex") {
+        document.getElementById("navvLan").className = "";
+        return "lanch";
+    }
+    else if(document.getElementById("coffee").style.display == "flex") {
+        document.getElementById("navvCoff").className = "";
+        return "coffee";
+    } else {
+        document.getElementById("navvTea").className = "";
+        return "tea"
+    }
+}
+
+function Task8() {
+    if(isActive('navvSnid'))return;
+    let category = categoryOnDisplay();
+    document.getElementById(category).style.display = "none";
+    document.getElementById('snid').style.display = "flex";
+    document.getElementById("navvSnid").className = "buttonActive";
+}
+
+function Task9() {
+    if(isActive('navvLan'))return;
+    let category = categoryOnDisplay();
+    document.getElementById(category).style.display = "none";
+    document.getElementById('lanch').style.display = "flex";
+    document.getElementById("navvLan").className = "buttonActive";
+}
+
+function Task10() {
+    if(isActive('navvCoff'))return;
+    let category = categoryOnDisplay();
+    document.getElementById(category).style.display = "none";
+    document.getElementById('coffee').style.display = "flex";
+    document.getElementById("navvCoff").className = "buttonActive";
+}
+
+function Task11() {
+    if(isActive('navvTea'))return;
+    let category = categoryOnDisplay();
+    document.getElementById(category).style.display = "none";
+    document.getElementById('tea').style.display = "flex";
+    document.getElementById("navvTea").className = "buttonActive";
 }

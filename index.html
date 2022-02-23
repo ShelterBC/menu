@@ -7,17 +7,12 @@
     <link rel = "stylesheet" href = "css/catalogstyle.css" type = "text/css">
     <link rel = "stylesheet" href = "css/slider.css" type = "text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <title>Menu</title>
 </head>
 <body>
         <div id = "head" class = "shelter-header shelter-header-ph">
         <img src="media/header/test.jpg" width="100%" height="100%">
     </div>
-    <button id = "back" type="submit" class="btn-back "><img class="btn-back-photo" src = "media/icons/free-icon-back-130882.png" width="100%" height="100%"></button>
-
     <div class="navigator">
         <button id = "hide" type="submit" class="button btn-photo"></button>
     </div>
@@ -25,9 +20,9 @@
     <div id = "mainContainer" class="shelter-content">
         <div class = "placeName">
             <h1><span>Сховище</span></h1>
-            <div class='marquee' style='overflow:hidden; width:100%;'><p><span>кавабар кавабар кавабар кавабар кавабар кавабар кавабар кавабар кавабар кавабар кавабар кавабар кавабар кавабар кавабар кавабар кавабар кавабар</span></p></div>
+            <h3><span>кавабар</span></h3>
         </div>
-        <div class="shelter-info">
+        <div id = "shelter-info" class="shelter-info">
             <div class="shelter-info_block">
                 <img src="media/icons/pin.png" class="icon">
                 <span>
@@ -43,7 +38,7 @@
             <div class="shelter-info_block">
                 <img src= "media/icons/call.png" class="icon">
                 <span>
-                    <a href="tel:+380685963696">+380993050608</a>
+                    <a href="tel:+380993050608">+380(99)305-06-08</a>
                 </span>
             </div>
             <div class="shelter-info_block">
@@ -51,6 +46,18 @@
                 <span>
                     <a>sheleter_bc</a>
                 </span>
+            </div>
+        </div>
+                <div id = "navv" class = "navigationBar">
+            <div style="flex-shrink: 2; width: 25%; display: flex;align-items: center;">
+                <img class="icon" src = "media/icons/free-icon-arrow-6529018.png">
+                <button id = "backk" type="submit" style="align-self: center;">Назад</button>
+            </div>
+            <div style="flex-shrink: 1; width: 75%;display: flex; justify-content: space-between;">
+                <button id = "navvSnid">Сніданики</button>
+                <button id = "navvLan">Ланчі</button>
+                <button id = "navvCoff">Кава</button>
+                <button id = "navvTea">Чай</button>
             </div>
         </div>
         <div id = "nav" class="menu_nav">
@@ -575,42 +582,6 @@
     <script src = "js/jquery-3.6.0.min.js"></script>
     <script src = "js/slick.min.js"></script>
     <script src = "js/slider.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
-    <script src = "js/marquee.js"></script>
-    <script>
-    $('#bavarages1').click(function () {
-        var newElems = $("<div id = 'addOne' class='slider'>" +
-        "<div class='slider__item'> <img class='productImage' src='media/cofee/espresso.jpeg'> </div>" +
-        "<div class='slider__item'><img class='productImage' src='media/cofee/coffee-americano.jpg'></div>" + 
-        "<div class='slider__item'><img class='productImage' src='media/cofee/espVsAmer.jpg'></div></div>"
-        +"<div id = 'addOneo' class='productDescription'><p style = 'text-align: left;''>Еспресо, Американо</p><hr></div>");
-        $('#fSlider').append(newElems);
-
-
-        newElems = $("<div id = 'addTwo' class='slider'>" +
-        "<div class='slider__item'> <img class='productImage' src='media/cofee/capuch.jpg'> </div>" +
-        "<div class='slider__item'><img class='productImage' src='media/cofee/latte.jpg'></div>" + 
-        "<div class='slider__item'><img class='productImage' src='media/cofee/flet.jpeg'></div>" + 
-        "<div class='slider__item'><img class='productImage' src='media/cofee/capVslatte.jpg'></div></div>"
-        +"<div id = 'addTwot' class='productDescription'><p style = 'text-align: left;''>Капучіно, Лате, Флет уайт</p><hr></div>");
-        $('#sSlider').append(newElems);
-
-        $(document).ready(function(){
-        $('.slider').slick({
-            arrows:false,
-            dots:true
-        });
-      });
-      });
-      </script>
-      <script>
-        $('#back').click(function() {
-            $('#addOne').remove();
-            $('#addOneo').remove();
-            $('#addTwo').remove();
-            $('#addTwot').remove();
-      });
-      </script>
 </body>
 </html>
 

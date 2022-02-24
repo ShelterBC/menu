@@ -2,6 +2,7 @@ document.getElementById('butn1').onclick = Task1;
 document.getElementById('butn2').onclick = Task2;
 document.getElementById('bavarages1').onclick = Task3;
 document.getElementById('bavarages2').onclick = Task4;
+document.getElementById('bavarages3').onclick = Task12;
 document.getElementById('food1').onclick = Task5;
 document.getElementById('food2').onclick = Task6;
 document.getElementById('backk').onclick = Task7;
@@ -10,6 +11,7 @@ document.getElementById('navvSnid').onclick = Task8;
 document.getElementById('navvLan').onclick = Task9;
 document.getElementById('navvCoff').onclick = Task10;
 document.getElementById('navvTea').onclick = Task11;
+document.getElementById('navvCoctels').onclick = Task13;
 
 
 var now = new Date();
@@ -37,11 +39,13 @@ function removeFood() {
 function addBavarages() {
     document.getElementById("bavarages1").style.display = "flex";
     document.getElementById("bavarages2").style.display = "flex";
+    document.getElementById("bavarages3").style.display = "flex";
 }
 
 function removeBavarages() {
     document.getElementById("bavarages1").style.display = "none";
     document.getElementById("bavarages2").style.display = "none";
+    document.getElementById("bavarages3").style.display = "none";
 }
 
 function isActive(buttunID) {
@@ -93,6 +97,18 @@ function Task4() {
     document.getElementById("butn2").style.display = "none";
     document.getElementById("navv").style.display = "flex";
     document.getElementById("navvTea").className = "buttonActive";
+    document.getElementById('mainContainer').style.height = "auto";
+    document.getElementById('shelter-info').style.display = 'none';
+}
+
+function Task12() {
+    let temp2 = document.getElementById("coctels");
+    temp2.style.display = "flex";
+    removeBavarages();
+    document.getElementById("butn1").style.display = "none";
+    document.getElementById("butn2").style.display = "none";
+    document.getElementById("navv").style.display = "flex";
+    document.getElementById("navvCoctels").className = "buttonActive";
     document.getElementById('mainContainer').style.height = "auto";
     document.getElementById('shelter-info').style.display = 'none';
 }
@@ -149,6 +165,13 @@ function Task7() {
         addBavarages();
         document.getElementById('butn2').style = "color: white; background: black";
         document.getElementById('butn1').style = "color: black; background: white";
+    }
+    else if(document.getElementById("coctels").style.display == "flex") {
+        document.getElementById("coctels").style.display = "none";
+        document.getElementById("navvCoctels").className = "";
+        addBavarages();
+        document.getElementById('butn2').style = "color: white; background: black";
+        document.getElementById('butn1').style = "color: black; background: white";
     } else {
         document.getElementById("tea").style.display = "none";
         document.getElementById("navvTea").className = "";
@@ -170,6 +193,9 @@ function categoryOnDisplay() {
     else if(document.getElementById("coffee").style.display == "flex") {
         document.getElementById("navvCoff").className = "";
         return "coffee";
+    }else if(document.getElementById("coctels").style.display == "flex") {
+        document.getElementById("navvCoctels").className = "";
+        return "coctels";
     } else {
         document.getElementById("navvTea").className = "";
         return "tea"
@@ -206,4 +232,12 @@ function Task11() {
     document.getElementById(category).style.display = "none";
     document.getElementById('tea').style.display = "flex";
     document.getElementById("navvTea").className = "buttonActive";
+}
+
+function Task13() {
+    if(isActive('navvCoctels'))return;
+    let category = categoryOnDisplay();
+    document.getElementById(category).style.display = "none";
+    document.getElementById('coctels').style.display = "flex";
+    document.getElementById("navvCoctels").className = "buttonActive";
 }

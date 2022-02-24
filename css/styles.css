@@ -106,7 +106,7 @@ body, html {
     display: flex;
     flex-direction: column;
     width: 40%;
-    height: 680px;
+    height: 800px;
     border-radius: 24px 24px 0 0;
     background: white;
     color: gray;
@@ -159,6 +159,7 @@ body, html {
     z-index: 100;
     background: white;
     box-shadow: 1px -1px 0px 4px rgb(255 255 255);
+    overflow: auto;
 }
 
 .navigationBar button {
@@ -166,6 +167,7 @@ body, html {
     background-color: white;
     border: none;
     height: 42px;
+    width: 90px;
     font-size: 18px;
     color: black;
 }
@@ -276,6 +278,10 @@ body, html {
     order: 4;
     background: url("../media/catalog/tee.JPG") center center no-repeat;
 }
+.item5 {
+    order: 5;
+    background: url("../media/catalog/coctels.jpg") center center no-repeat;
+}
 .category_item h1 {
     color: white;
     letter-spacing: 0.1em;
@@ -285,7 +291,7 @@ body, html {
     display: none;
 }
 
-#bavarages1, #bavarages2 {
+#bavarages1, #bavarages2, , #bavarages3 {
     display: none;
 }
 

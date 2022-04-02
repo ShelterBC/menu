@@ -5,6 +5,7 @@ document.getElementById('bavarages2').onclick = Task4;
 document.getElementById('bavarages3').onclick = Task12;
 document.getElementById('food1').onclick = Task5;
 document.getElementById('food2').onclick = Task6;
+document.getElementById('food3').onclick = Task14;
 document.getElementById('backk').onclick = Task7;
 document.getElementById('hide').onclick = reload;
 document.getElementById('navvSnid').onclick = Task8;
@@ -12,6 +13,7 @@ document.getElementById('navvLan').onclick = Task9;
 document.getElementById('navvCoff').onclick = Task10;
 document.getElementById('navvTea').onclick = Task11;
 document.getElementById('navvCoctels').onclick = Task13;
+document.getElementById('navvAnti').onclick = Task15;
 
 
 var now = new Date();
@@ -29,11 +31,13 @@ function reload() {
 function addFood() {
     document.getElementById("food1").style.display = "flex";
     document.getElementById("food2").style.display = "flex";
+    document.getElementById("food3").style.display = "flex";
 }
 
 function removeFood() {
     document.getElementById("food1").style.display = "none";
     document.getElementById("food2").style.display = "none";
+    document.getElementById("food3").style.display = "none";
 }
 
 function addBavarages() {
@@ -125,6 +129,20 @@ function Task5() {
     document.getElementById('shelter-info').style.display = 'none';
 }
 
+function Task14() {
+    let temp2 = document.getElementById("antiCris");
+    temp2.style.display = "flex";
+    removeFood();
+    document.getElementById("butn1").style.display = "none";
+    document.getElementById("butn2").style.display = "none";
+    document.getElementById("navv").style.display = "flex";
+    document.getElementById("navvAnti").className = "buttonActive";
+    document.getElementById('mainContainer').style.height = "auto";
+    document.getElementById('shelter-info').style.display = 'none';
+}
+
+
+
 function Task6() {
     let temp2 = document.getElementById("lanch");
     temp2.style.display = "flex";
@@ -148,6 +166,13 @@ function Task7() {
     if(document.getElementById("snid").style.display == "flex") {
         document.getElementById("snid").style.display = "none";
         document.getElementById("navvSnid").className = "";
+        addFood();
+        document.getElementById('butn1').style = "color: white; background: black";
+        document.getElementById('butn2').style = "color: black; background: white";
+    }
+    else if(document.getElementById("antiCris").style.display == "flex") {
+        document.getElementById("antiCris").style.display = "none";
+        document.getElementById("navvAnti").className = "";
         addFood();
         document.getElementById('butn1').style = "color: white; background: black";
         document.getElementById('butn2').style = "color: black; background: white";
@@ -185,6 +210,10 @@ function categoryOnDisplay() {
     if(document.getElementById("snid").style.display == "flex") {
         document.getElementById("navvSnid").className = "";
         return "snid";
+    }
+    else if(document.getElementById("antiCris").style.display == "flex") {
+        document.getElementById("navvAnti").className = "";
+        return "antiCris";
     } 
     else if(document.getElementById("lanch").style.display == "flex") {
         document.getElementById("navvLan").className = "";
@@ -196,7 +225,8 @@ function categoryOnDisplay() {
     }else if(document.getElementById("coctels").style.display == "flex") {
         document.getElementById("navvCoctels").className = "";
         return "coctels";
-    } else {
+    }
+     else {
         document.getElementById("navvTea").className = "";
         return "tea"
     }
@@ -240,4 +270,12 @@ function Task13() {
     document.getElementById(category).style.display = "none";
     document.getElementById('coctels').style.display = "flex";
     document.getElementById("navvCoctels").className = "buttonActive";
+}
+
+function Task15() {
+    if(isActive('navvAnti'))return;
+    let category = categoryOnDisplay();
+    document.getElementById(category).style.display = "none";
+    document.getElementById('antiCris').style.display = "flex";
+    document.getElementById("navvAnti").className = "buttonActive";
 }

@@ -167,7 +167,7 @@ body, html {
     background-color: white;
     border: none;
     height: 42px;
-    width: 90px;
+    width: 105px;
     font-size: 18px;
     color: black;
 }
@@ -262,26 +262,30 @@ body, html {
 }
 
 .item1 {
-    order: 1;
+    order: 2;
     background: url("../media/catalog/bf.jpg") center center no-repeat;
 }
-
 .item2 {
-    order: 2;
+    order: 3;
     background: url("../media/catalog/lanch.jpg") center center no-repeat;
 }
 .item3 {
-    order: 3;
+    order: 4;
     background: url("../media/catalog/coffee.jpg") center center no-repeat;
 }
 .item4 {
-    order: 4;
+    order: 5;
     background: url("../media/catalog/tee.JPG") center center no-repeat;
 }
 .item5 {
-    order: 5;
+    order: 6;
     background: url("../media/catalog/coctels.jpg") center center no-repeat;
 }
+.item6 {
+    order: 1;
+    background: url("../media/catalog/anticrisis.png") center;
+}
+
 .category_item h1 {
     color: white;
     letter-spacing: 0.1em;
@@ -306,9 +310,6 @@ hr {
     margin: 30px 0;
     background-image: linear-gradient(to right, #FFF, #0000001f, #FFF);
 }
-
-
-
 
 #notAvailable {
     flex-shrink: 0;

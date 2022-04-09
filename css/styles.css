@@ -153,6 +153,10 @@ body, html {
     color: #5f5e5e;
 }
 
+.navigationBarWrapper {
+    overflow: hidden;
+  }
+
 .navigationBar {
     position: sticky;
     width: 100%;
@@ -162,9 +166,22 @@ body, html {
     z-index: 100;
     background: white;
     box-shadow: 1px -1px 0px 4px rgb(255 255 255);
-    overflow: auto;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 25px;
+    margin-bottom: -20px;
 }
+.navigationBar {
+    mask-image: linear-gradient(
+        90deg,
+        transparent 0, rgba(0, 0, 0, .25) 9px,
+        #000 18px,
+        #000 calc(100% - 18px),
+        rgba(0, 0, 0, .25) calc(100% - 9px),
+        transparent
+      );
 
+}
 .navigationBar button {
     font-family: Noah-bold;
     background-color: white;
@@ -173,6 +190,7 @@ body, html {
     width: 105px;
     font-size: 18px;
     color: black;
+    margin-right: 10px;
 }
 
 .buttonActive {

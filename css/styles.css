@@ -442,7 +442,7 @@ hr {
     }
     .shelter-info {
         justify-content: flex-start;
-        font-size: 14px;
+        font-size: 16px;
         flex-direction: column;
     }
     .menu_nav {

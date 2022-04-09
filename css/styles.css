@@ -1,16 +1,19 @@
 @font-face {
     font-family: RoadRage;
-    src: url("../fonts/13891.ttf"); 
+    src: url("../fonts/13891.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: Noah;
-    src: url("../fonts/Noah-Regular.ttf"); 
+    src: url("../fonts/Noah-Regular.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: Noah-bold;
-    src: url("../fonts/Noah-Bold.ttf"); 
+    src: url("../fonts/Noah-Bold.ttf");
+    font-display: swap;
 }
 
 body {

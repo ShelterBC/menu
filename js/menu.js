@@ -2,7 +2,7 @@ document.getElementById('butn1').onclick = Task1;
 document.getElementById('butn2').onclick = Task2;
 document.getElementById('bavarages1').onclick = Task3;
 document.getElementById('bavarages2').onclick = Task4;
-document.getElementById('bavarages3').onclick = Task12;
+//document.getElementById('bavarages3').onclick = Task12;
 document.getElementById('food1').onclick = Task5;
 document.getElementById('food2').onclick = Task6;
 document.getElementById('food3').onclick = Task14;
@@ -12,7 +12,7 @@ document.getElementById('navvSnid').onclick = Task8;
 document.getElementById('navvLan').onclick = Task9;
 document.getElementById('navvCoff').onclick = Task10;
 document.getElementById('navvTea').onclick = Task11;
-document.getElementById('navvCoctels').onclick = Task13;
+//document.getElementById('navvCoctels').onclick = Task13;
 document.getElementById('navvAnti').onclick = Task15;
 
 
@@ -104,7 +104,7 @@ function Task4() {
     document.getElementById('mainContainer').style.height = "auto";
     document.getElementById('shelter-info').style.display = 'none';
 }
-
+/*
 function Task12() {
     let temp2 = document.getElementById("coctels");
     temp2.style.display = "flex";
@@ -115,7 +115,7 @@ function Task12() {
     document.getElementById("navvCoctels").className = "buttonActive";
     document.getElementById('mainContainer').style.height = "auto";
     document.getElementById('shelter-info').style.display = 'none';
-}
+}*/
 
 function Task5() {
     let temp2 = document.getElementById("snid");
@@ -263,14 +263,14 @@ function Task11() {
     document.getElementById('tea').style.display = "flex";
     document.getElementById("navvTea").className = "buttonActive";
 }
-
+/*
 function Task13() {
     if(isActive('navvCoctels'))return;
     let category = categoryOnDisplay();
     document.getElementById(category).style.display = "none";
     document.getElementById('coctels').style.display = "flex";
     document.getElementById("navvCoctels").className = "buttonActive";
-}
+}*/
 
 function Task15() {
     if(isActive('navvAnti'))return;

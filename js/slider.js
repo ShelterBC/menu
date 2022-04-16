@@ -10,10 +10,15 @@ function slidersAppear () {
 
     newElems = $("<div id = 'addTwo' class='slider'>" +
     "<div class='slider__item'> <img class='productImage' src='media/cofee/capuch.jpg'> </div>" +
-    "<div class='slider__item'><img class='productImage' src='media/cofee/latte.jpg'></div>" + 
-    "<div class='slider__item'><img class='productImage' src='media/cofee/flet.jpeg'></div></div>"
-    +"<div id = 'addTwot' class='productDescription'><p style = 'text-align: left;''>Капучіно, Лате, Флет уайт</p><hr></div>");
+    "<div class='slider__item'><img class='productImage' src='media/cofee/latte.jpg'></div></div>"
+    +"<div id = 'addTwot' class='productDescription'><p style = 'text-align: left;''>Капучіно, Лате</p><hr></div>");
     $('#sSlider').append(newElems);
+    
+    newElems = $("<div id = 'addTwo' class='slider'>" +
+    "<div class='slider__item'> <img class='productImage' src='media/cofee/capuch.jpg'> </div>" +
+    "<div class='slider__item'><img class='productImage' src='media/cofee/latte.jpg'></div></div>"
+    +"<div id = 'addTwot' class='productDescription'><p style = 'text-align: left;''>Флет уайт, какао</p><hr></div>");
+    $('#bSlider').append(newElems);
 
     $(document).ready(function(){
     $('.slider').slick({

@@ -3,8 +3,7 @@ $('#navvCoff').click(slidersAppear);
 function slidersAppear () {
     var newElems = $("<div id = 'addOne' class='slider'>" +
     "<div class='slider__item'> <img class='productImage' src='media/cofee/espresso.jpeg'> </div>" +
-    "<div class='slider__item'><img class='productImage' src='media/cofee/coffee-americano.jpg'></div>" + 
-    "<div class='slider__item'><img class='productImage' src='media/cofee/espVsAmer.jpg'></div></div>"
+    "<div class='slider__item'><img class='productImage' src='media/cofee/coffee-americano.jpg'></div></div>"
     +"<div id = 'addOneo' class='productDescription'><p style = 'text-align: left;''>Еспресо, Американо</p><hr></div>");
     $('#fSlider').append(newElems);
 
@@ -12,8 +11,7 @@ function slidersAppear () {
     newElems = $("<div id = 'addTwo' class='slider'>" +
     "<div class='slider__item'> <img class='productImage' src='media/cofee/capuch.jpg'> </div>" +
     "<div class='slider__item'><img class='productImage' src='media/cofee/latte.jpg'></div>" + 
-    "<div class='slider__item'><img class='productImage' src='media/cofee/flet.jpeg'></div>" + 
-    "<div class='slider__item'><img class='productImage' src='media/cofee/capVslatte.jpg'></div></div>"
+    "<div class='slider__item'><img class='productImage' src='media/cofee/flet.jpeg'></div></div>"
     +"<div id = 'addTwot' class='productDescription'><p style = 'text-align: left;''>Капучіно, Лате, Флет уайт</p><hr></div>");
     $('#sSlider').append(newElems);
 

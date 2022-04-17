@@ -7,6 +7,7 @@ document.getElementById('food1').onclick = Task5;
 document.getElementById('food2').onclick = Task6;
 document.getElementById('food3').onclick = Task14;
 document.getElementById('backk').onclick = Task7;
+document.getElementById('backk2').onclick = Task7;
 document.getElementById('hide').onclick = reload;
 document.getElementById('navvSnid').onclick = Task8;
 document.getElementById('navvLan').onclick = Task9;
@@ -15,14 +16,15 @@ document.getElementById('navvTea').onclick = Task11;
 document.getElementById('navvCoctels').onclick = Task13;
 document.getElementById('navvAnti').onclick = Task15;
 
-
+/*
 var now = new Date();
 if(now.getDay() == 4) {
     document.getElementById("notAvailable").style.display = "none";
 } else {
     document.getElementById("Available").style.display = "none";
-}
+}*/
 var contentHeight = document.getElementById('mainContainer').style.height;
+
 
 function reload() {
     location.reload();
@@ -197,12 +199,15 @@ function Task7() {
         addBavarages();
         document.getElementById('butn2').style = "color: white; background: black";
         document.getElementById('butn1').style = "color: black; background: white";
-    } else {
+    } 
+    else if(document.getElementById("tea").style.display == "flex"){
         document.getElementById("tea").style.display = "none";
         document.getElementById("navvTea").className = "";
         addBavarages();
         document.getElementById('butn2').style = "color: white; background: black";
         document.getElementById('butn1').style = "color: black; background: white";
+    } else {
+        return;
     }
 }
 

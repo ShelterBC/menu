@@ -73,10 +73,6 @@ body, html {
     margin: 10px 0;
 }
 
-.shelter-header-ph {
-    background: url("../media/header/headd.jpg") center center no-repeat;
-}
-
 .navigator {
     position: relative;;
     display: flex;
@@ -181,17 +177,17 @@ body, html {
 
 .navigationBarWrapper {
     overflow: hidden;
+    position: sticky;
+    box-shadow: 1px -1px 0px 4px rgb(255 255 255);
+    top:3px;
+    z-index: 100;
   }
 
 .navigationBar {
-    position: sticky;
     width: 100%;
     display: flex;
     flex-direction: row;
-    top:3px;
-    z-index: 100;
     background: white;
-    box-shadow: 1px -1px 0px 4px rgb(255 255 255);
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 25px;

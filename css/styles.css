@@ -395,6 +395,28 @@ hr {
     font-style: normal;
 }
 
+.footer {
+    font-size: small;
+    position: absolute;
+    color: white;
+    background: black;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    margin-top: 50px;
+    left: 0;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #cdcbcb;
+    padding: 2px;
+}
+
+.footer a:hover {
+    color: #5f5e5e;
+}
+
 
 
 @media only screen  and (max-width: 1024px) {
@@ -437,7 +459,7 @@ hr {
     }
 }
 
-@media only screen  and (max-width: 427px) {
+@media only screen  and (max-width: 450px) {
 
     body{
         background: white;

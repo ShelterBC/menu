@@ -1,3 +1,4 @@
+
 document.getElementById('butn1').onclick = Task1;
 document.getElementById('butn2').onclick = Task2;
 document.getElementById('bavarages1').onclick = Task3;
@@ -28,6 +29,10 @@ var contentHeight = document.getElementById('mainContainer').style.height;
 
 function reload() {
     location.reload();
+}
+
+function refreshScrollAnimation() {
+    AOS.refresh();
 }
 
 function addFood() {
@@ -69,6 +74,7 @@ function Task1() {
     }
     document.getElementById('butn1').style = "color: white; background: black";
     removeBavarages();
+    refreshScrollAnimation();
 }
 
 function Task2() {
@@ -79,6 +85,7 @@ function Task2() {
     }
     document.getElementById('butn2').style = "color: white; background: black";
     removeFood();
+    refreshScrollAnimation();
 }
 
 
@@ -93,6 +100,7 @@ function Task3() {
     document.getElementById("navvCoff").className = "buttonActive";
     document.getElementById('mainContainer').style.height = "auto";
     document.getElementById('shelter-info').style.display = 'none';
+    refreshScrollAnimation();
 }
 
 function Task4() {
@@ -105,6 +113,7 @@ function Task4() {
     document.getElementById("navvTea").className = "buttonActive";
     document.getElementById('mainContainer').style.height = "auto";
     document.getElementById('shelter-info').style.display = 'none';
+    refreshScrollAnimation();
 }
 
 function Task12() {
@@ -117,6 +126,7 @@ function Task12() {
     document.getElementById("navvCoctels").className = "buttonActive";
     document.getElementById('mainContainer').style.height = "auto";
     document.getElementById('shelter-info').style.display = 'none';
+    refreshScrollAnimation();
 }
 
 function Task5() {
@@ -129,6 +139,7 @@ function Task5() {
     document.getElementById("navvSnid").className = "buttonActive";
     document.getElementById('mainContainer').style.height = "auto";
     document.getElementById('shelter-info').style.display = 'none';
+    refreshScrollAnimation();
 }
 
 function Task14() {
@@ -141,6 +152,7 @@ function Task14() {
     document.getElementById("navvAnti").className = "buttonActive";
     document.getElementById('mainContainer').style.height = "auto";
     document.getElementById('shelter-info').style.display = 'none';
+    refreshScrollAnimation();
 }
 
 
@@ -155,6 +167,7 @@ function Task6() {
     document.getElementById("navvLan").className = "buttonActive";
     document.getElementById('mainContainer').style.height = "auto";
     document.getElementById('shelter-info').style.display = 'none';
+    refreshScrollAnimation();
 }
 
 function Task7() {
@@ -209,6 +222,7 @@ function Task7() {
     } else {
         return;
     }
+    refreshScrollAnimation();
 }
 
 function categoryOnDisplay() {
@@ -243,6 +257,7 @@ function Task8() {
     document.getElementById(category).style.display = "none";
     document.getElementById('snid').style.display = "flex";
     document.getElementById("navvSnid").className = "buttonActive";
+    refreshScrollAnimation();
 }
 
 function Task9() {
@@ -251,6 +266,7 @@ function Task9() {
     document.getElementById(category).style.display = "none";
     document.getElementById('lanch').style.display = "flex";
     document.getElementById("navvLan").className = "buttonActive";
+    refreshScrollAnimation();
 }
 
 function Task10() {
@@ -259,6 +275,7 @@ function Task10() {
     document.getElementById(category).style.display = "none";
     document.getElementById('coffee').style.display = "flex";
     document.getElementById("navvCoff").className = "buttonActive";
+    refreshScrollAnimation();
 }
 
 function Task11() {
@@ -267,6 +284,7 @@ function Task11() {
     document.getElementById(category).style.display = "none";
     document.getElementById('tea').style.display = "flex";
     document.getElementById("navvTea").className = "buttonActive";
+    refreshScrollAnimation();
 }
 
 function Task13() {
@@ -275,6 +293,7 @@ function Task13() {
     document.getElementById(category).style.display = "none";
     document.getElementById('coctels').style.display = "flex";
     document.getElementById("navvCoctels").className = "buttonActive";
+    refreshScrollAnimation();
 }
 
 function Task15() {
@@ -283,4 +302,5 @@ function Task15() {
     document.getElementById(category).style.display = "none";
     document.getElementById('antiCris').style.display = "flex";
     document.getElementById("navvAnti").className = "buttonActive";
+    refreshScrollAnimation();
 }

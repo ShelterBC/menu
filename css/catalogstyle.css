@@ -173,7 +173,7 @@
   width: 20%;
 }
 
-@media only screen  and (max-width: 427px) {
+@media only screen  and (max-width: 450px) {
     .productFooter {
         font-size: 1.2em;
     }

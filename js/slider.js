@@ -4,7 +4,7 @@ function slidersAppear () {
     var newElems = $("<div data-aos='fade-up' id = 'addOne' class='slider'>" +
     "<div class='slider__item'> <img class='productImage' src='media/cofee/espresso.jpeg'> </div>" +
     "<div class='slider__item'><img class='productImage' src='media/cofee/coffee-americano.jpg'></div></div>"
-    +"<div id = 'addOneo' class='productDescription'><p style = 'text-align: left;''>Еспресо, Американо, Американо з молоком(30₴)<br>Допіо</p><hr></div>");
+    +"<div id = 'addOneo' class='productDescription'><p style = 'text-align: left;''>Еспресо, Американо<br>Американо з молоком(30₴)<br>Допіо</p><hr></div>");
     $('#fSlider').append(newElems);
 
 

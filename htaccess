@@ -1,0 +1,15 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^astoriaservice\.com\.ua$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.astoriaservice\.com\.ua$
+RewriteRule ^/?$ "https\:\/\/astoriaservice\.com\.ua\/" [R=301,L]
+
+
+
+
+
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico|otf|ttf)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>

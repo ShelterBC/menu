@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel = "stylesheet" href = "css/styles.css" type = "text/css">
     <link rel = "stylesheet" href = "css/catalogstyle.css" type = "text/css">
-    <link rel = "stylesheet" href = "css/slider.css" type = "text/css">
+    <link rel = "stylesheet" href = "css/preloader.css" type = "text/css">
     <link href="aos.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" href="media/logo/toch.png">
@@ -14,6 +14,11 @@
     <title>Menu</title>
 </head>
 <body>
+    <div class="wrapper">
+        <div class="Loader">
+            <img src="media/logo/logoHight.png" width="85%" height="85%">
+        </div>
+    </div>
     <div id = "head" class = "shelter-header">
         <img src="media/header/test.jpg" width="100%" height="100%" alt = "pht">
     </div>
@@ -41,7 +46,7 @@
             <div class="shelter-info_block">
                 <img src= "media/icons/call.png" class="icon" alt = "pht">
                 <span>
-                    <a href="tel:+380993050608">+380(99)305-06-08</a>
+                    <a href="tel:+380993050608">+380(67)752-50-89</a>
                 </span>
             </div>
             <div class="shelter-info_block">
@@ -51,126 +56,145 @@
                 </span>
             </div>
         </div>
-        <div id = "navv" class="navigationBarWrapper">
-            <div class = "navigationBar">
-                <div id = "backk" style="display: flex; align-items: center;">
-                    <img  class="icon" src = "media/icons/free-icon-arrow-6529018.png">
-                    <button type="submit" style="align-self: center;">Назад</button>
-                </div>
-                <div style="display: flex; justify-content: space-between;">
-                    <button style = "width: 130px" id = "navvAnti">Антикриза</button>
-                    <button id = "navvSnid">Сніданки</button>
-                    <button id = "navvLan">Ланчі</button>
-                    <button id = "navvCoff">Кава</button>
-                    <button id = "navvTea">Чай</button>
-                    <button id = "navvCoctels">Коктейлі</button>
-                </div>
-            </div>
-        </div>
         <div id = "nav" class="menu_nav">
-            <button type="submit" id = "butn1" class="bttn one" style = "color: white; background-color: black;">Їжа</button>
+            <button type="submit" id = "butn1" class="bttn one" style = "color: white; background-color: black;">Кухня</button>
             <button type="submit" id = "butn2" class="bttn one" style = "color: black; background-color: white;">Бар</button>
             
         </div>
-        <div data-aos="zoom-in" id = "catalog" class="catagory_list">
-            <div id = "bavarages1" class="category_item item3">
-                <h1>Кава</h1>
+        <div class = "navigationBar">
+            <div id = "kitchen">
+                <button style = "width: 130px" id = "navvAnti" onclick="task5()" class="buttonActive">Новинки</button>
+                <button id = "navvSnid" onclick="task3()">Сніданки</button>
+                <button id = "navvLan" onclick="task4()">Ланчі</button>
             </div>
-            <div id = "bavarages2" class="category_item item4">
-                <h1>Чай</h1>
-            </div>
-            <div id = "bavarages3" class="category_item item5">
-                <h1>Коктейлі</h1>
-            </div>
-            <div id = "food3" class="category_item item6">
-                <h1>Антикризове меню</h1>
-            </div>
-            <div id = "food1" class="category_item item1">
-                <h1>Сніданки</h1>
-            </div>
-            <div id = "food2" class="category_item item2">
-                <h1>Ланчі</h1>
+            <div id = "bar">
+                <button id = "navvCoctels" onclick="task6()" class="buttonActive">Коктейлі</button>
+                <button id = "navvTea" onclick="task8()">Вино</button>
+                <button id = "navvCoff" onclick="task7()">Інше</button>
             </div>
         </div>
+
         <div id = "antiCris" class="productsList">
-            <h1 style="text-align: center; font-family: Noah-bold, sans-serif;" >Антикризове меню</h1>
+            <h1 style="text-align: center; font-family: Noah-bold, sans-serif;" >Тестуємо новинки<br>запитуйте на барі</h1>
             <div data-aos="fade-up" class="productArea">
                     <div class="productHeader">
-                        <h3 class = "producTitle"><span style="color: #3c3838;">Сендвіч з бужениною</span></h2>
+                        <h3 class = "producTitle"><span style="color: #3c3838;">Салат з авокадо<br>та креветками</span></h2>
                         <div class="productFooter">
-                            <strong>75 ₴ | 200 г</strong>
+                            <strong>170 ₴ | 300 г</strong>
                         </div>
                     </div>
-                    <img class="productImage" src = "media/antiCrisis/antiSend.jpg" width="100%" height="100%" alt = "Тунец">
+                    <img class="productImage" src = "media/antiCrisis/salatKriv.jpg" width="100%" height="100%" alt = "Тунец">
                     <div class="productDescription">
-                        <p style = "text-align: left;">Абсолютно новий сендвіч, приготовлений за неймовірною рецептурою, яка задовольнить навіть затятих гурманів. </p>
+                        <p style = "text-align: left;">Салат з авокадо та креветками. Склад: зелень, медовий соус, авокадо, креветки, томати черрі, пармезан </p>
                         <div class="extrainf">
                             <div class="productEnergy">
                                 <p>
                                     Калорійність
                                     </p>
                             </div>
-                            <div class="productWeight"> 428 ккал</div>
+                            <div class="productWeight"> ... ккал</div>
                         </div>
                         <hr>
                     </div>
             </div>
              <div data-aos="fade-up"  class="productArea">
                     <div class="productHeader">
-                        <h3 class = "producTitle"><span style="color: #3c3838;">Сендвіч з тунцем</span></h2>
+                        <h3 class = "producTitle"><span style="color: #3c3838;">Салат з апельсином <br>та фетою</span></h2>
                         <div class="productFooter">
-                            <strong>75 ₴ | 200 г</strong>
+                            <strong>150 ₴ | 300 г</strong>
                         </div>
                     </div>
-                    <img class="productImage" src = "media/antiCrisis/antiSendTun.jpg" width="100%" height="100%" alt = "pht">
+                    <img class="productImage" src = "media/antiCrisis/salatOrange.jpg" width="100%" height="100%" alt = "pht">
                     <div class="productDescription">
-                        <p style = "text-align: left;">Для тих, хто не їсть м'ясо, у нас є спеціальна пропозиція - сендвіч з соковитим тунцем! </p>
+                        <p style = "text-align: left;">Склад: зелень, соус, апельсин, буряк, фета, зовсім трішки червоної цибулі, волоський горіх</p>
                         <div class="extrainf">
                             <div class="productEnergy">
                                 <p>
                                     Калорійність
                                     </p>
                             </div>
-                            <div class="productWeight"> 428 ккал</div>
+                            <div class="productWeight">... ккал</div>
                         </div>
                         <hr>
                     </div>
             </div>
             <div data-aos="fade-up"  class="productArea">
                 <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Бургер</span></h3>
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Салат з лососем та моцареллою</span></h3>
                     <div class="productFooter">
-                       <strong>80 ₴ | 140 г</strong>
+                       <strong>160 ₴ | 140 г</strong>
                     </div>
                 </div>
-                <img class="productImage" src = "media/antiCrisis/antiBurger.jpg" width="100%" height="100%" alt = "pht">
+                <img class="productImage" src = "media/antiCrisis/salatLosos.jpg" width="100%" height="100%" alt = "pht">
                 <div class="productDescription">
-                        <p style = "text-align: left;">Підкоривший мільони сердець, канонічний чизбургер. Соковита котлета, смачнючий сир та хрумка булочка - рецепт задаволення. Куштуй та насолоджуйся!</p>
+                        <p style = "text-align: left;">Склад: зелень, соус з медом та дюжонською гірчицею, томати черрі, лосось, моцарелла, гарбузове насіння</p>
                         <div class="extrainf">
                             <div class="productEnergy">
                                 <p>
                                     Калорійність
                                     </p>
                             </div>
-                            <div class="productWeight"> 470 ккал</div>
+                            <div class="productWeight">... ккал</div>
                         </div>
                         <hr>
                 </div>
             </div>
 
         </div>
-        <div id = "snid" class="productsList">
+        <div id = "snid" class="productsList" style="margin-top: 50px;">
             <h1 style="text-align: center; font-family: Noah-bold, sans-serif;" >Сніданки цілий день</h1>
             <div data-aos="fade-up" id class="productArea">
+                <div class="productHeader">
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Сніданок з ковбасками<br> та хумусом</span></h2>
+                    <div class="productFooter">
+                        <strong>120 ₴ | 400 г</strong>
+                    </div>
+                </div>
+                <img class="productImage" src = "media/bf/breakfastSos.jpg" width="100%" height="100%" alt = "pht">
+                <div class="productDescription">
+                    <p style = "text-align: left;">Склад: глазунья, гірнки, мікс зелені, томати черрі, хумус, гірчично-медовий соус</p>
+                    <div class="extrainf">
+                        <div class="productEnergy">
+                            <p>
+                                Калорійність
+                                </p>
+                        </div>
+                        <div class="productWeight"> ... ккал</div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div data-aos="fade-up" id class="productArea">
+                <div class="productHeader">
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Сніданок з лососем<br> та крем сиром</span></h2>
+                    <div class="productFooter">
+                        <strong>120 ₴ | 400 г</strong>
+                    </div>
+                </div>
+                <img class="productImage" src = "media/bf/breakfastLosos.jpg" width="100%" height="100%" alt = "pht">
+                <div class="productDescription">
+                    <p style = "text-align: left;">Склад: глазунья, грінки, мікс зелені, томати черрі, крем сир, волоський горіх, медова заправка</p>
+                    <div class="extrainf">
+                        <div class="productEnergy">
+                            <p>
+                                Калорійність
+                                </p>
+                        </div>
+                        <div class="productWeight"> ... ккал</div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div data-aos="fade-up" id class="productArea">
                     <div class="productHeader">
-                        <h3 class = "producTitle"><span style="color: #3c3838;">Сніданок</span></h2>
+                        <h3 class = "producTitle"><span style="color: #3c3838;">Сніданок з авокадо<br> та міні мелтом</span></h2>
                         <div class="productFooter">
                             <strong>140 ₴ | 400 г</strong>
                         </div>
                     </div>
                     <img class="productImage" src = "media/bf/breakfast.jpg" width="100%" height="100%" alt = "pht">
                     <div class="productDescription">
-                        <p style = "text-align: left;">Склад: зелень, авокадо, томати, оливки, фета, пів мелта</p>
+                        <p style = "text-align: left;">Склад: міні мелт сирний/з хамоном, зелень, томати черрі, соєвий соус, авокадо, фета, оливки</p>
                         <div class="extrainf">
                             <div class="productEnergy">
                                 <p>
@@ -184,65 +208,26 @@
             </div>
             <div data-aos="fade-up" class="productArea">
                 <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Вівсянка з бананом</span></h3>
-                    <div class="productFooter">
-                       <strong>70 ₴ | 350 г</strong>
-                    </div>
+                        <h3 class = "producTitle"><span style="color: #3c3838;">Крок месьє</span></h3>
+                        <div class="productFooter">
+                            <strong>130 ₴ | 200 г</strong>
+                        </div>
                 </div>
-                <img class="productImage" src = "media/bf/ovsyanaya-kasha-s-bananom.jpg" width="100%" height="100%" alt = "pht">
+                <img class="productImage" src = "media/bf/mesie.jpg" width="100%" height="100%"  alt = "pht">
                 <div class="productDescription">
-                        <p style = "text-align: left;">Склад: вівсянка, молоко, банан, фундук, арахісова паста</p>
+                        <p style = "text-align: left;">клад: крафтовий хліб, крем сир, куряче філе, зелень, глазунья, гірчично-медовий соус, радамер, пармезан</p>
                         <div class="extrainf">
                             <div class="productEnergy">
                                 <p>
+                                    
                                     Калорійність
                                     </p>
                             </div>
-                            <div class="productWeight">470 ккал</div>
+                            <div class="productWeight"> 400 ккал</div>
                         </div>
                         <hr>
                 </div>
             </div>
-            <!--<div data-aos="fade-up" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Пластівці з йогуртом та джемом</span></h3>
-                    <div class="productFooter">
-                        <strong>60 ₴ | 300 г</strong>
-                    </div>
-                </div>
-                <img class="productImage" src = "media/bf/flakes.jpg" width="100%" height="100%" alt = "pht">
-                <div class="productDescription">
-                        <p style = "text-align: left;">Склад: пластівці кукурузяні, йогурт класичний, джем</p>
-                        <div class="extrainf">
-                            <div class="productEnergy">
-                                <p>Калорійність</p>
-                            </div>
-                            <div class="productWeight"> 397 ккал</div>
-                        </div>
-                        <hr>
-                </div>
-            </div>
-            <div data-aos="fade-up" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Гранола з сухофруктами</span></h3>
-                    <div class="productFooter">
-                        <strong>75 ₴ | 300 г</strong>
-                    </div>
-                </div>
-                <img class="productImage" src = "media/bf/granule.jpg" width="100%" height="100%"  alt = "pht">
-                <div class="productDescription">
-                        <p style = "text-align: left;">Склад: гранола, молоко, сухофрукти</p>
-                        <div class="extrainf">
-                            <div class="productEnergy">
-                                <p>
-                                    Калорійність
-                                    </p>
-                            </div>
-                            <div class="productWeight"> 670 ккал</div>
-                        </div>
-                        <hr>
-                </div>
-            </div>-->
             <div data-aos="fade-up" class="productArea">
                 <div class="productHeader">
                         <h3 class = "producTitle"><span style="color: #3c3838;">Авокадотост</span></h3>
@@ -252,7 +237,7 @@
                 </div>
                 <img class="productImage" src = "media/bf/avocadoToast.jpg" width="100%" height="100%"  alt = "pht">
                 <div class="productDescription">
-                        <p style = "text-align: left;">Склад: тост, хумус, фета, авокадо, коктейльні томати</p>
+                        <p style = "text-align: left;">Склад: крафтовий хліб, хумус, фета, авокадо, сир брі, томати черрі, зелень</p>
                         <div class="extrainf">
                             <div class="productEnergy">
                                 <p>
@@ -265,36 +250,10 @@
                         <hr>
                 </div>
             </div>
-            <!--<div data-aos="fade-up" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Тост з грушею</span></h3>
-                    <div class="productFooter">
-                        <strong>60 ₴ | 200 г</strong>
-                    </div>
-                </div>
-                <img class="productImage" src = "media/bf/pineToast.jpg" width="100%" height="100%"  alt = "pht">
-                <div class="productDescription">
-                        <p style = "text-align: left;">Тост, йогурт, блю сир, моцарелла, груша</p>
-                        <div class="extrainf">
-                            <div class="productEnergy">
-                                <p>
-                                    Білки
-                                        <br>
-                                    Жири
-                                    <br>
-                                    Вуглеводи
-                                    <br>
-                                    Калорійність
-                                    </p>
-                            </div>
-                            <div class="productWeight"> 10 г <br> 10 г <br> 10 г <br> 260 ккал</div>
-                        </div>
-                        <hr>
-                </div>
-            </div>-->
         </div>
-        <div id = "lanch" class="productsList">
+        <div id = "lanch" class="productsList" style="margin-top: 50px;">
             <h1 style="text-align: center; font-family: Noah-bold, sans-serif;" >Ланчі цілий день</h1>
+
             <div data-aos="fade-up" class="productArea">
                 <div class="productHeader">
                     <h3 class = "producTitle"><span style="color: #3c3838;">Сирний мелт</span></h3>
@@ -338,27 +297,42 @@
                         <hr>
                     </div>
             </div>
+
             <div data-aos="fade-up" class="productArea">
-                    <div class="productHeader">
-                        <h3 class = "producTitle"><span style="color: #3c3838;">Мелт з тунцем</span></h3>
-                        <div class="productFooter">
-                            <strong>120 ₴ | 270 г</strong>
+                <div class="productHeader">
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Бургер з яловичини</span></h3>
+                    <div class="productFooter"><strong>130 ₴ | 400 г</strong></div>
+                </div>
+                <img class="productImage" src = "media/lh/burger.jpg" width="100%" height="100%">
+                <div class="productDescription">
+                    <p style = "text-align: left;">Склад: булочка бріош, соус, гірчиця, зелень, сир чеддер, яловича котлета, томат</p>
+                    <div class="extrainf">
+                        <div class="productEnergy">
+                            <p>Калорійність</p>
                         </div>
+                        <div class="productWeight"> овер дофіга ккал</div>
                     </div>
-                    <img class="productImage" src = "media/lh/tyneMelt.jpg" width="100%" height="100%" alt = "pht">
-                    <div class="productDescription">
-                        <p style = "text-align: left;">Склад: хліб, радамер, руккола, коктейльні томати, соус, тунець</p>
-                        <div class="extrainf">
-                            <div class="productEnergy">
-                                <p>
-                                    Калорійність
-                                    </p>
-                            </div>
-                            <div class="productWeight"> 440 ккал</div>
-                        </div>
-                        <hr>
-                    </div>
+                    <hr>
+                </div>
             </div>
+            <div data-aos="fade-up" class="productArea">
+            <div class="productHeader">
+                <h3 class = "producTitle"><span style="color: #3c3838;">Бургер з куркою</span></h3>
+                <div class="productFooter"><strong>130 ₴ | 400 г</strong></div>
+            </div>
+            <img class="productImage" src = "media/antiCrisis/antiBurger.jpg" width="100%" height="100%">
+            <div class="productDescription">
+                <p style = "text-align: left;">Склад: булка бріош, соус, гірчиця, зелень, сир чеддер, куряча котлета, томат, ананас</p>
+                <div class="extrainf">
+                    <div class="productEnergy">
+                        <p>Калорійність</p>
+                    </div>
+                    <div class="productWeight"> овер дофіга ккал</div>
+                </div>
+                <hr>
+            </div>
+            </div>
+
             <div data-aos="fade-up" class="productArea">
                     <div style="align-items:flex-end;" class="productHeader">
                         <h3 class = "producTitle"><span style="color: #3c3838;">Боул з лососем</span></h3>
@@ -455,183 +429,7 @@
                     <hr>
                 </div>
             </div>
-            <!--
-            <div data-aos="fade-up" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Бургер з лососем та авокадо</span></h3>
-                    <div class="productFooter"><strong>100 ₴ | 300 г</strong></div>
-                </div>
-                <img class="productImage" src = "media/lh/avacadoBurger.jpg" width="100%" height="100%">
-                <div class="productDescription">
-                    <p style = "text-align: left;">
-                        Булка бріош, зелень, лосось, авокадо, хумус, фета, томат, лайм</p>
-                    <div class="extrainf">
-                        <div class="productEnergy">
-                            <p>
-                                Білки
-                                    <br>
-                                Жири
-                                <br>
-                                Вуглеводи
-                                <br>
-                                Калорійність
-                                </p>
-                        </div>
-                        <div class="productWeight"> 10 г <br> 10 г <br> 10 г <br> 630 ккал</div>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-            <div data-aos="fade-up" class="productArea">
-                    <div class="productHeader">
-                        <h3 class = "producTitle"><span style="color: #3c3838;">Фірмовий бургер</span></h3>
-                        <div class="productFooter"><strong>110 ₴ | 400 г</strong></div>
-                    </div>
-                    <div id = "notAvailable">
-                        <h1>Готуємо щочетверга</h1>
-                    </div>
-                    <img id = "Available" class="productImage" src = "media/lh/burger.jpg" width="100%" height="100%">
-                    <div class="productDescription">
-                        <p style = "text-align: left;">Булка бріош, зелень, котлета з яловичини та свинини, чеддер, соус bbq, діжонська гірчиця, томати, особливий інгрідієнт</p>
-                        <div class="extrainf">
-                            <div class="productEnergy">
-                                <p>
-                                    Білки
-                                        <br>
-                                    Жири
-                                    <br>
-                                    Вуглеводи
-                                    <br>
-                                    Калорійність
-                                    </p>
-                            </div>
-                            <div class="productWeight"> 10 г <br> 10 г <br> 10 г <br> овер дофіга ккал</div>
-                        </div>
-                        <hr>
-                    </div>
-            </div>-->
-        </div>
-        <div id = "coffee" class="productsList">
-            <h1 style="text-align: center; font-family: Noah-bold, sans-serif;" >Фірмова Кава</h1>
-            <div data-aos="fade-up" id = "fSlider" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Чорна</span></h3>
-                    <div class="productFooter">
-                        <img src="media/icons/littleCoffe.png" width="25px" height="25px">
-                        <strong>27 ₴ |</strong>
-                        <img src="media/icons/bigCoffee.png" width="25px" height="25px">
-                        <strong>40 ₴</strong>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="fade-up" id = "sSlider" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Біла</span></h3>
-                    <div class="productFooter">
-                        <img src="media/icons/littleCoffe.png" width="25px" height="25px">
-                        <strong>35 ₴ |</strong>
-                        <img src="media/icons/bigCoffee.png" width="25px" height="25px">
-                        <strong>60 ₴</strong>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="fade-up" id = "bSlider" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Біла</span></h3>
-                    <div class="productFooter">
-                        <img src="media/icons/littleCoffe.png" width="25px" height="25px">
-                        <strong>50 ₴</strong>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="fade-up" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Фільтр</span></h3>
-                    <div class="productFooter">
-                        <img src="media/icons/littleCoffe.png" width="25px" height="25px">
-                        <strong>40 ₴</strong>
-                    </div>
-                </div>
-                <img class="productImage" src = "media/cofee/aeropress.jpg" width="50%" height="100%">
-                <div class="productDescription">
-                    <p style = "text-align: left;">Аеропрес</p>
-                    <hr>
-                </div>
-            </div>
-            <div data-aos="fade-up" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Еспресо тонік</span></h3>
-                    <div class="productFooter">
-                        <img src="media/icons/bigCoffee.png" width="25px" height="25px">
-                        <strong>50 ₴</strong>
-                    </div>
-                </div>
-                <img class="productImage" src = "media/cofee/espresoTonik.jpg" width="50%" height="100%">
-                <div class="productDescription">
-                    <p style = "text-align: left;">Подвійний шот еспресо та тонік, вилиті в склянку з льодом</p>
-                    <hr>
-                </div>
-            </div>
-            <div data-aos="fade-up" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Бамбл</span></h3>
-                    <div class="productFooter">
-                        <img src="media/icons/bigCoffee.png" width="25px" height="25px">
-                        <strong>50 ₴</strong>
-                    </div>
-                </div>
-                <img class="productImage" src = "media/cofee/bumble.jpg" width="50%" height="100%">
-                <div class="productDescription">
-                    <p style = "text-align: left;">Холодний веселий напій: кава з апельсиновим соком</p>
-                    <hr>
-                </div>
-            </div>
-            <div data-aos="fade-up" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Ice лате</span></h3>
-                    <div class="productFooter">
-                        <img src="media/icons/bigCoffee.png" width="25px" height="25px">
-                        <strong>50 ₴</strong>
-                    </div>
-                </div>
-                <img class="productImage" src = "media/cofee/iceLatte.jpg" width="50%" height="100%">
-                <div class="productDescription">
-                    <p style = "text-align: left;">Звичайний лате з льодом. Смачний та освіжаючий кавовий напій!</p>
-                    <hr>
-                </div>
-            </div>
 
-        </div>
-        <div id = "tea" class="productsList">
-            <h1 style="text-align: center; font-family: Noah-bold, sans-serif;" >Фірмовий чай</h1>
-            <div data-aos="fade-up" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Листовий</span></h3>
-                    <div class="productFooter">
-                        <img src="media/icons/bigTea.png" width="25px" height="25px">
-                        <strong>30 ₴</strong>
-                    </div>
-                </div>
-                <img class="productImage" src = "media/tea/teee.jpg" width="50%" height="100%">
-                <div class="productDescription">
-                    <p style = "text-align: left;">Листовий чай на різний смак: альпійский луг, каркаде, ройбуш, чорний, зелений</p>
-                    <hr>
-                </div>
-            </div>
-            <div data-aos="fade-up" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Авторський</span></h3>
-                    <div class="productFooter">
-                        <img src="media/icons/bigTea.png" width="25px" height="25px">
-                        <strong>50 ₴</strong>
-                    </div>
-                </div>
-                <img class="productImage" src = "media/tea/samovar.jpg" width="50%" height="100%">
-                <div class="productDescription">
-                    <p style = "text-align: left;">Неймовірний чай, приготовлений за авторською рецептурою: обліпіховий, манго-маракуя, імбірний, журавлинний</p>
-                    <hr>
-                </div>
-            </div>
         </div>
         <div id = "coctels" class="productsList">
             <h1 style="text-align: center; font-family: Noah-bold, sans-serif;" >Класичні коктейлі</h1>
@@ -818,10 +616,13 @@
                     <hr>
                 </div>
             </div>
+        </div>
+        <div id = "tea" class="productsList" style="margin-top: 50px;">
             <h1 style="text-align: center; font-family: Noah-bold, sans-serif;" >Вино</h1>
+
             <div data-aos="fade-up" class="productArea">
                 <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;"</span>Біле вино</h3>
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Біле вино</span></h3>
                     <div class="productFooter">
                         <img src="media/icons/vine.png" width="25px" height="25px">
                         <strong>100 ₴ | 150 мл</strong>
@@ -833,20 +634,7 @@
                     <hr>
                 </div>
             </div>
-            <!--<div data-aos="fade-up" class="productArea">
-                <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Cavalli Neri Rosso Semi Dolce</span></h3>
-                    <div class="productFooter">
-                        <img src="media/icons/vine.png" width="25px" height="25px">
-                        <strong>100 ₴ | 150 мл</strong>
-                    </div>
-                </div>
-                <img class="productImage" src = "media/coctels/redSemi.jpg" width="50%" height="100%">
-                <div class="productDescription">
-                    <p style = "text-align: left;">Червоне напівсолодке вино</p>
-                    <hr>
-                </div>
-            </div>-->
+
             <div data-aos="fade-up" class="productArea">
                 <div class="productHeader">
                     <h3 class = "producTitle"><span style="color: #3c3838;">Червоне вино</span></h3>
@@ -862,40 +650,130 @@
                 </div>
             </div>
             <h1 style="text-align: center; font-family: Noah-bold, sans-serif;" >Закуски</h1>
+
             <div data-aos="fade-up" class="productArea">
                 <div class="productHeader">
-                    <h3 class = "producTitle"><span style="color: #3c3838;">Сирне плато</span></h3>
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Винне плато</span></h3>
                     <div class="productFooter">
                         <img src="media/icons/chips.png" width="25px" height="25px">
-                        <strong>200 ₴</strong>
+                        <strong>190 ₴</strong>
                     </div>
                 </div>
                 <img class="productImage" src = "media/coctels/сheesePlato.jpg" width="50%" height="100%">
                 <div class="productDescription">
-                    <p style = "text-align: left;">Склад: пармезан, дор блю, брі, хамон, мед</p>
+                    <p style = "text-align: left;">Склад: пармезан, блю сир, брі, хамон, оливки</p>
                     <hr>
                 </div>
             </div>
         </div>
+        <div id = "coffee" class="productsList" style="margin-top: 50px;">
+            <h1 style="text-align: center; font-family: Noah-bold, sans-serif;" >Фірмова кава та чай</h1>
+
+            <div data-aos="fade-up" class="productArea">
+                <div class="productHeader" style = 'margin: 0;'>
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Чорна</span></h3>
+                    <div class="productFooter">
+                        <img src="media/icons/littleCoffe.png" width="25px" height="25px">
+                        <strong>27 ₴ |</strong>
+                        <img src="media/icons/bigCoffee.png" width="25px" height="25px">
+                        <strong>40 ₴</strong>
+                    </div>
+                </div>
+                <div class='productDescription'><p style = 'text-align: left; margin: 0;'>Еспресо, Американо<br>Американо з молоком(30₴)<br>Допіо</p></div>
+            </div>
+            <div data-aos="fade-up" class="productArea">
+                <div class="productHeader" style = 'margin: 0;'>
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Біла</span></h3>
+                    <div class="productFooter">
+                        <img src="media/icons/littleCoffe.png" width="25px" height="25px">
+                        <strong>35 ₴ |</strong>
+                        <img src="media/icons/bigCoffee.png" width="25px" height="25px">
+                        <strong>60 ₴</strong>
+                    </div>
+                </div>
+                <div id = 'addTwot' class='productDescription'><p style = 'text-align: left; margin: 0;'>Капучіно, Лате</p></div>
+            </div>
+            <div data-aos="fade-up" class="productArea">
+                <div class="productHeader" style = 'margin: 0;'>
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Біла</span></h3>
+                    <div class="productFooter">
+                        <img src="media/icons/littleCoffe.png" width="25px" height="25px">
+                        <strong>50 ₴</strong>
+                    </div>
+                </div>
+                <div id = 'addThreeO' class='productDescription'><p style = 'text-align: left; margin: 0;'>Флет уайт, Какао</p></div>
+            </div>
+            <div data-aos="fade-up" class="productArea">
+                <div class="productHeader">
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Фільтр</span></h3>
+                    <div class="productFooter">
+                        <img src="media/icons/littleCoffe.png" width="25px" height="25px">
+                        <strong>40 ₴</strong>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" class="productArea">
+                <div class="productHeader">
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Еспресо тонік</span></h3>
+                    <div class="productFooter">
+                        <img src="media/icons/bigCoffee.png" width="25px" height="25px">
+                        <strong>50 ₴</strong>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" class="productArea">
+                <div class="productHeader">
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Бамбл</span></h3>
+                    <div class="productFooter">
+                        <img src="media/icons/bigCoffee.png" width="25px" height="25px">
+                        <strong>50 ₴</strong>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" class="productArea">
+                <div class="productHeader">
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Ice лате</span></h3>
+                    <div class="productFooter">
+                        <img src="media/icons/bigCoffee.png" width="25px" height="25px">
+                        <strong>50 ₴</strong>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" class="productArea">
+                <div class="productHeader">
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Чай листовий</span></h3>
+                    <div class="productFooter">
+                        <img src="media/icons/bigTea.png" width="25px" height="25px">
+                        <strong>30 ₴</strong>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" class="productArea">
+                <div class="productHeader">
+                    <h3 class = "producTitle"><span style="color: #3c3838;">Чай авторський</span></h3>
+                    <div class="productFooter">
+                        <img src="media/icons/bigTea.png" width="25px" height="25px">
+                        <strong>50 ₴</strong>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
+
     <div class="footer">
         <p>© shelterbc.gihub.io 2022</p>
         <p>Designed and created by <span><a href="https://www.instagram.com/helldemid/">helldemid</a></span></p>
     </div>
         
-        
-        <!--<div class="b-popup" id="pop">
-            <div class="b-popup-content">
-                <p>Нажаль, коктельна карта знаходится ще в розробці</p>
-                <br>
-            <a href="javascript:PopUpHide()">OK</a>
-            </div>
-        </div>-->
     
-    <script src = "js/menu.js"></script>
+    <script src = "js/anime.js"></script>
     <script src = "js/jquery-3.6.0.min.js"></script>
     <script src = "js/slick.min.js"></script>
+    <script src = "js/menu.js"></script>
     <script src = "js/slider.js"></script>
+    
     <script src = "aos.js"></script>
     <script>
         AOS.init();
@@ -931,22 +809,15 @@
 
         gtag('config', 'G-EM8KPK5XXY');
     </script>
-        
-    <!--
     <script>
-    $(document).ready(function() {
-        PopUpHide();
-      });
-      $('#bavarages3').click(PopUpShow);
-      $('#navvCoctels').click(PopUpShow);
-      
-      function PopUpShow() {
-        $("#pop").show();
-      }
-      
-      function PopUpHide() {
-        $("#pop").hide();
-      }
-      </script>-->
+            window.onload = function () {
+              document.body.classList.add('loaded_hiding');
+              window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+              }, 500);
+            }
+    </script>
+        
 </body>
 </html>

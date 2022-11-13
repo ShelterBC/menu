@@ -47,7 +47,7 @@
     margin-bottom: 10px;
     min-width: 0;
     width: 100%;
-    max-height: 350px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 0px black;
 }
@@ -200,4 +200,31 @@
     .productFooterLong {
         font-size: 0.9em;
     }
+}
+
+@media only screen and (max-width: 325px) {
+    .placeName h1 {
+        font-size: 2em;
+    }
+    .shelter-content h1 {
+        color: black;
+        font-size: 27px;
+    }
+    .productFooter {
+        font-size: 0.9em;
+    }
+    .productDescription {
+        font-size: 14px;
+    }
+    .productEnergy, .productWeight {
+        font-size: 12px;
+    }
+    .producTitle {
+        font-size: 1.1em;
+        margin-top: 5px;
+    }
+    .navigationBar {
+        margin-top: 10px;
+    }
+    
 }

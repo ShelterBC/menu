@@ -1,21 +1,141 @@
+var navBarOnScreen = false;
+
+
+function playFadeAnim(target, isShow) {
+    if(isShow) {
+        var fade = anime ({
+            targets: target,
+            easing: 'easeInOutSine',
+            opacity: [0, 1],
+            duration: 500
+        })
+    } else {
+        var fade = anime ({
+            targets: target,
+            easing: 'easeInOutSine',
+            display: [1, 0],
+            duration: 500
+        })
+    }
+}
+
+
+function isActive(buttunID) {
+    var temp = document.getElementById(buttunID).style.color;
+    return temp == "white";
+}
+
+
+
+
+ 
+function scrollTracking(elemID){
+	var wt = $(window).scrollTop();
+	var wh = $(window).height();
+	var et = $(elemID).offset().top;
+	var eh = $(elemID).outerHeight();
+ 
+	return (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh));
+}
+
+function activeClass() {
+    let elemts = ["#navvAnti", "#navvSnid", "#navvLan", "#navvCoctels", "#navvCoff", "#navvTea"];
+    for(let i = 0; i < elemts.length; i++) {
+        if($(elemts[i]).hasClass('buttonActive')) return elemts[i];
+    }
+}
+function setActive(elemId) {
+    let temp = activeClass();
+    $(temp).removeClass('buttonActive');
+    $(elemId).addClass('buttonActive');
+}
+
+$(window).scroll (function () {
+    if(scrollTracking('#nav')) {
+        if(isActive(('butn1'))) {
+            if(navBarOnScreen) {
+                playFadeAnim('#kitchen', false);
+                navBarOnScreen = false;
+            }
+            $('#kitchen').css('display', 'none');
+        } else {
+            if(navBarOnScreen) {
+                playFadeAnim('#bar', false);
+                navBarOnScreen = false;
+            }
+            $('#bar').css('display', 'none');
+        }
+    } else {
+        if(isActive(('butn1'))) {
+            $('#kitchen').css('display', 'flex');
+            if(!navBarOnScreen) {
+                playFadeAnim('#kitchen', true);
+                navBarOnScreen = true;
+            }
+        } else {
+            $('#bar').css('display', 'flex');
+            if(!navBarOnScreen) {
+                playFadeAnim('#bar', true);
+                navBarOnScreen = true;
+            }
+        }
+    }
+    if(isActive(('butn1'))) {
+
+        if(scrollTracking('#antiCris') && !scrollTracking('#snid') && !scrollTracking('#lanch')) setActive("#navvAnti");
+        if(scrollTracking('#snid') && !scrollTracking('#antiCris') && !scrollTracking('#lanch')) setActive("#navvSnid");
+        if(scrollTracking('#lanch') && !scrollTracking('#antiCris') && !scrollTracking('#snid')) setActive("#navvLan");
+
+    } else if(isActive(('butn2'))) {
+        if(scrollTracking('#coctels') && !scrollTracking('#coffee') && !scrollTracking('#tea')) setActive("#navvCoctels");
+        if(scrollTracking('#coffee') && !scrollTracking('#coctels') && !scrollTracking('#tea')) setActive("#navvCoff");
+        if(scrollTracking('#tea') && !scrollTracking('#coctels') && !scrollTracking('#coffee')) setActive("#navvTea");
+    } else {
+        return;
+    }
+});
+
+
+
 
 document.getElementById('butn1').onclick = Task1;
 document.getElementById('butn2').onclick = Task2;
-document.getElementById('bavarages1').onclick = Task3;
-document.getElementById('bavarages2').onclick = Task4;
-document.getElementById('bavarages3').onclick = Task12;
-document.getElementById('food1').onclick = Task5;
-document.getElementById('food2').onclick = Task6;
-document.getElementById('food3').onclick = Task14;
-document.getElementById('backk').onclick = Task7;
-document.getElementById('backk2').onclick = Task7;
+
 document.getElementById('hide').onclick = reload;
-document.getElementById('navvSnid').onclick = Task8;
-document.getElementById('navvLan').onclick = Task9;
-document.getElementById('navvCoff').onclick = Task10;
-document.getElementById('navvTea').onclick = Task11;
-document.getElementById('navvCoctels').onclick = Task13;
-document.getElementById('navvAnti').onclick = Task15;
+
+
+function task3() {
+    if(isActive('navvSnid')) return;
+    scroll('#snid');
+}
+function task4() {
+    if(isActive('navvLan')) return;
+    scroll('#lanch');
+}
+function task5() {
+    if(isActive('navvAnti')) return;
+    scroll('#antiCris');
+}
+function task6() {
+    if(isActive('navvCoctels')) return;
+    scroll('#coctels');
+}
+function task7() {
+    if(isActive('navvCoff')) return;
+    scroll('#coffee');
+}
+function task8() {
+    if(isActive('navvTea')) return;
+    scroll('#tea');
+}
+
+
+function scroll(elemId) { // ID откуда кливаем
+    let scrollWidth = $(elemId).offset().top - 44;
+    $('html, body').animate({
+        scrollTop: scrollWidth  // класс объекта к которому приезжаем
+    }, 500); // Скорость прокрутки
+}
 
 /*
 var now = new Date();
@@ -36,35 +156,31 @@ function refreshScrollAnimation() {
 }
 
 function addFood() {
-    document.getElementById("food1").style.display = "flex";
-    document.getElementById("food2").style.display = "flex";
-    document.getElementById("food3").style.display = "flex";
+    $('#antiCris').show();
+    $('#snid').show();
+    $('#lanch').show();
 }
 
 function removeFood() {
-    document.getElementById("food1").style.display = "none";
-    document.getElementById("food2").style.display = "none";
-    document.getElementById("food3").style.display = "none";
+    $('#antiCris').hide();
+    $('#snid').hide();
+    $('#lanch').hide();
 }
 
 function addBavarages() {
-    document.getElementById("bavarages1").style.display = "flex";
-    document.getElementById("bavarages2").style.display = "flex";
-    document.getElementById("bavarages3").style.display = "flex";
+    $('#coffee').show();
+    $('#tea').show();
+    $('#coctels').show();
+    slidersAppear();
 }
 
 function removeBavarages() {
-    document.getElementById("bavarages1").style.display = "none";
-    document.getElementById("bavarages2").style.display = "none";
-    document.getElementById("bavarages3").style.display = "none";
+    $('#coffee').hide();
+    $('#tea').hide();
+    $('#coctels').hide();
+    slidersRemove();
 }
 
-function isActive(buttunID) {
-    var temp = document.getElementById(buttunID).style.color;
-    if(temp == "white") return true;
-    else if(temp == "black") return false;
-
-}
 
 function Task1() {
     if(isActive("butn1"))return;
@@ -85,222 +201,5 @@ function Task2() {
     }
     document.getElementById('butn2').style = "color: white; background: black";
     removeFood();
-    refreshScrollAnimation();
-}
-
-
-
-function Task3() {
-    let temp2 = document.getElementById("coffee");
-    temp2.style.display = "flex";
-    removeBavarages();
-    document.getElementById("butn1").style.display = "none";
-    document.getElementById("butn2").style.display = "none";
-    document.getElementById("navv").style.display = "flex";
-    document.getElementById("navvCoff").className = "buttonActive";
-    document.getElementById('mainContainer').style.height = "auto";
-    document.getElementById('shelter-info').style.display = 'none';
-    refreshScrollAnimation();
-}
-
-function Task4() {
-    let temp2 = document.getElementById("tea");
-    temp2.style.display = "flex";
-    removeBavarages();
-    document.getElementById("butn1").style.display = "none";
-    document.getElementById("butn2").style.display = "none";
-    document.getElementById("navv").style.display = "flex";
-    document.getElementById("navvTea").className = "buttonActive";
-    document.getElementById('mainContainer').style.height = "auto";
-    document.getElementById('shelter-info').style.display = 'none';
-    refreshScrollAnimation();
-}
-
-function Task12() {
-    let temp2 = document.getElementById("coctels");
-    temp2.style.display = "flex";
-    removeBavarages();
-    document.getElementById("butn1").style.display = "none";
-    document.getElementById("butn2").style.display = "none";
-    document.getElementById("navv").style.display = "flex";
-    document.getElementById("navvCoctels").className = "buttonActive";
-    document.getElementById('mainContainer').style.height = "auto";
-    document.getElementById('shelter-info').style.display = 'none';
-    refreshScrollAnimation();
-}
-
-function Task5() {
-    let temp2 = document.getElementById("snid");
-    temp2.style.display = "flex";
-    removeFood();
-    document.getElementById("butn1").style.display = "none";
-    document.getElementById("butn2").style.display = "none";
-    document.getElementById("navv").style.display = "flex";
-    document.getElementById("navvSnid").className = "buttonActive";
-    document.getElementById('mainContainer').style.height = "auto";
-    document.getElementById('shelter-info').style.display = 'none';
-    refreshScrollAnimation();
-}
-
-function Task14() {
-    let temp2 = document.getElementById("antiCris");
-    temp2.style.display = "flex";
-    removeFood();
-    document.getElementById("butn1").style.display = "none";
-    document.getElementById("butn2").style.display = "none";
-    document.getElementById("navv").style.display = "flex";
-    document.getElementById("navvAnti").className = "buttonActive";
-    document.getElementById('mainContainer').style.height = "auto";
-    document.getElementById('shelter-info').style.display = 'none';
-    refreshScrollAnimation();
-}
-
-
-
-function Task6() {
-    let temp2 = document.getElementById("lanch");
-    temp2.style.display = "flex";
-    removeFood();
-    document.getElementById("butn1").style.display = "none";
-    document.getElementById("butn2").style.display = "none";
-    document.getElementById("navv").style.display = "flex";
-    document.getElementById("navvLan").className = "buttonActive";
-    document.getElementById('mainContainer').style.height = "auto";
-    document.getElementById('shelter-info').style.display = 'none';
-    refreshScrollAnimation();
-}
-
-function Task7() {
-    document.getElementById("butn1").style.display = "flex";
-    document.getElementById("butn2").style.display = "flex";
-    document.getElementById('mainContainer').style.height = contentHeight;
-    document.getElementById("navv").style.display = "none";
-    document.getElementById('shelter-info').style.display = 'flex';
-
-
-    if(document.getElementById("snid").style.display == "flex") {
-        document.getElementById("snid").style.display = "none";
-        document.getElementById("navvSnid").className = "";
-        addFood();
-        document.getElementById('butn1').style = "color: white; background: black";
-        document.getElementById('butn2').style = "color: black; background: white";
-    }
-    else if(document.getElementById("antiCris").style.display == "flex") {
-        document.getElementById("antiCris").style.display = "none";
-        document.getElementById("navvAnti").className = "";
-        addFood();
-        document.getElementById('butn1').style = "color: white; background: black";
-        document.getElementById('butn2').style = "color: black; background: white";
-    } 
-    else if(document.getElementById("lanch").style.display == "flex") {
-        document.getElementById("lanch").style.display = "none";
-        document.getElementById("navvLan").className = "";
-        addFood();
-        document.getElementById('butn1').style = "color: white; background: black";
-        document.getElementById('butn2').style = "color: black; background: white";
-    }
-    else if(document.getElementById("coffee").style.display == "flex") {
-        document.getElementById("coffee").style.display = "none";
-        document.getElementById("navvCoff").className = "";
-        addBavarages();
-        document.getElementById('butn2').style = "color: white; background: black";
-        document.getElementById('butn1').style = "color: black; background: white";
-    }
-    else if(document.getElementById("coctels").style.display == "flex") {
-        document.getElementById("coctels").style.display = "none";
-        document.getElementById("navvCoctels").className = "";
-        addBavarages();
-        document.getElementById('butn2').style = "color: white; background: black";
-        document.getElementById('butn1').style = "color: black; background: white";
-    } 
-    else if(document.getElementById("tea").style.display == "flex"){
-        document.getElementById("tea").style.display = "none";
-        document.getElementById("navvTea").className = "";
-        addBavarages();
-        document.getElementById('butn2').style = "color: white; background: black";
-        document.getElementById('butn1').style = "color: black; background: white";
-    } else {
-        return;
-    }
-    refreshScrollAnimation();
-}
-
-function categoryOnDisplay() {
-    if(document.getElementById("snid").style.display == "flex") {
-        document.getElementById("navvSnid").className = "";
-        return "snid";
-    }
-    else if(document.getElementById("antiCris").style.display == "flex") {
-        document.getElementById("navvAnti").className = "";
-        return "antiCris";
-    } 
-    else if(document.getElementById("lanch").style.display == "flex") {
-        document.getElementById("navvLan").className = "";
-        return "lanch";
-    }
-    else if(document.getElementById("coffee").style.display == "flex") {
-        document.getElementById("navvCoff").className = "";
-        return "coffee";
-    }else if(document.getElementById("coctels").style.display == "flex") {
-        document.getElementById("navvCoctels").className = "";
-        return "coctels";
-    }
-     else {
-        document.getElementById("navvTea").className = "";
-        return "tea"
-    }
-}
-
-function Task8() {
-    if(isActive('navvSnid'))return;
-    let category = categoryOnDisplay();
-    document.getElementById(category).style.display = "none";
-    document.getElementById('snid').style.display = "flex";
-    document.getElementById("navvSnid").className = "buttonActive";
-    refreshScrollAnimation();
-}
-
-function Task9() {
-    if(isActive('navvLan'))return;
-    let category = categoryOnDisplay();
-    document.getElementById(category).style.display = "none";
-    document.getElementById('lanch').style.display = "flex";
-    document.getElementById("navvLan").className = "buttonActive";
-    refreshScrollAnimation();
-}
-
-function Task10() {
-    if(isActive('navvCoff'))return;
-    let category = categoryOnDisplay();
-    document.getElementById(category).style.display = "none";
-    document.getElementById('coffee').style.display = "flex";
-    document.getElementById("navvCoff").className = "buttonActive";
-    refreshScrollAnimation();
-}
-
-function Task11() {
-    if(isActive('navvTea'))return;
-    let category = categoryOnDisplay();
-    document.getElementById(category).style.display = "none";
-    document.getElementById('tea').style.display = "flex";
-    document.getElementById("navvTea").className = "buttonActive";
-    refreshScrollAnimation();
-}
-
-function Task13() {
-    if(isActive('navvCoctels'))return;
-    let category = categoryOnDisplay();
-    document.getElementById(category).style.display = "none";
-    document.getElementById('coctels').style.display = "flex";
-    document.getElementById("navvCoctels").className = "buttonActive";
-    refreshScrollAnimation();
-}
-
-function Task15() {
-    if(isActive('navvAnti'))return;
-    let category = categoryOnDisplay();
-    document.getElementById(category).style.display = "none";
-    document.getElementById('antiCris').style.display = "flex";
-    document.getElementById("navvAnti").className = "buttonActive";
     refreshScrollAnimation();
 }

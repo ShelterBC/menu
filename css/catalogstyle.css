@@ -117,11 +117,15 @@
     text-align: end;
 }
 
+#antiCris {
+    display: flex;
+}
+
 #snid{
-    display: none;
+    display: flex;
 }
 #lanch {
-    display: none;
+    display: flex;
 }
 
 #coffee {
@@ -135,9 +139,13 @@
     display: none;
 }
 
-#antiCris {
+#kitchen, #bar {
     display: none;
+    justify-content: space-between;
+    opacity: 0;
 }
+
+
 
 
 

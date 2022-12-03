@@ -11,6 +11,7 @@
     z-index: 1000;
     top: 0;
     left: 0;
+    overflow: none;
 }
 
 .Loader {

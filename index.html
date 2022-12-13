@@ -826,9 +826,11 @@
     <script>
             window.onload = function () {
               document.body.classList.add('loaded_hiding');
+                $(".body").css("overflow", "hidden");
               window.setTimeout(function () {
                 document.body.classList.add('loaded');
                 document.body.classList.remove('loaded_hiding');
+                  $(".body").css("overflow", "scroll");
               }, 500);
             }
     </script>

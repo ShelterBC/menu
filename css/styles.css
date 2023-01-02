@@ -20,6 +20,7 @@
 
 body {
     background: whitesmoke;
+    overflow: hidden;
 }
 
 body, html {

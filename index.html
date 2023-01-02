@@ -825,13 +825,13 @@
     </script>
     <script>
             window.onload = function () {
-              document.body.classList.add('loaded_hiding');
+                document.body.classList.add('loaded_hiding');
                 $("body").css("overflow", "hidden");
-              window.setTimeout(function () {
-                document.body.classList.add('loaded');
-                document.body.classList.remove('loaded_hiding');
-                  $("body").css("overflow", "scroll");
-              }, 500);
+                window.setTimeout(function () {
+                    document.body.classList.add('loaded');
+                    document.body.classList.remove('loaded_hiding');
+                }, 500);
+                $("body").css("overflow", "scroll");
             }
     </script>
         
